@@ -1,0 +1,22 @@
+<Project>
+
+  <Import Project="../._Common.csproj"/>
+
+	<ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" /><!-- Indispensable pour TOUS, sinon Tests non exécutés -->
+    
+    <!-- POUR xUnit-->
+    <PackageReference Include="xunit" Version="2.*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.*"/>   <!-- Indispensable sinon Tests non exécutés (ignorés) -->
+
+    <!-- POUR FluentAssertions -->
+    <!-- <PackageReference Include="MSTest.TestFramework" Version="3.*" />-->    <!-- Indispensable sinon manque des dépendances -->
+    <!-- <PackageReference Include="MSTest.TestAdapter" Version="3.*" />-->      <!-- Indispensable sinon Tests non exécutés -->    
+		<!-- <PackageReference Include="FluentAssertions" Version="6.*" />		 -->
+		
+    <!-- POUR Moq -->
+		<PackageReference Include="Moq" Version="4.*" />
+    
+	</ItemGroup>  
+
+</Project>

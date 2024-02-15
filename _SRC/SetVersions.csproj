@@ -1,0 +1,6 @@
+<Project>
+	<PropertyGroup>
+		<PackageVersion>$(MyPackageMajorVersion).$(MyPackageMinorVersion).$(MyPackagePatchVersion).$(MyPackageBuildVersion)$(MyPackagePreReleaseInfos)</PackageVersion>
+		<Version>$(PackageVersion)</Version><!--Version de la DLL-->
+	</PropertyGroup>
+</Project>

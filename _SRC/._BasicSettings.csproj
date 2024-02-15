@@ -1,0 +1,16 @@
+<Project>
+
+  <PropertyGroup>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    
+    <MyLocalPrivateSubPath>Private</MyLocalPrivateSubPath>
+  </PropertyGroup>
+
+  <Import Project="../._Common.csproj"/>
+
+  <Import Project="$(MyLocalPrivateSubPath)/EmbedDLLsDependenciesInNuget.csproj"/><!-- ATTENTION : le 1er niveau de DLLs en dépendances, devra avoir un attribut PrivateAssets="all" (dans la balise ProjectReference) pour que tout projet qui utilisera le Nuget, puisse récupérer toute la chaîne de dépendances(DLLs(ProjectReference)) de ces DLLs.-->
+
+  <Import Project="$(MyLocalPrivateSubPath)/InitVersioning.csproj" />
+
+</Project>

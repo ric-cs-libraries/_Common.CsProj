@@ -1,0 +1,34 @@
+<Project>
+	<PropertyGroup>
+		<Maintenant>$([System.DateTime]::Now.ToString("yyMMdd HH:mm:ss"))</Maintenant>
+		
+		<AnneeMoisDuMoment>$(Maintenant.SubString(0,4))</AnneeMoisDuMoment>
+		<JourDuMoment>$(Maintenant.SubString(4,2))</JourDuMoment>
+		<HeureDuMoment>$(Maintenant.SubString(7,2))</HeureDuMoment>
+		<MinutesDuMoment>$(Maintenant.SubString(10,2))</MinutesDuMoment>
+		<SecondesDuMoment>$(Maintenant.SubString(13,2))</SecondesDuMoment>
+
+		<HeureMinutesDuMoment>$(HeureDuMoment)h$(MinutesDuMoment)mn</HeureMinutesDuMoment>
+    <SecondesDuMoment>$(SecondesDuMoment)s</SecondesDuMoment>
+		
+		<MyPackageBuildVersion>$(AnneeMoisDuMoment)</MyPackageBuildVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<MyPreReleaseVersion Condition=" '$(MyPreReleaseVersion)' == '' ">beta</MyPreReleaseVersion>
+		<!--<MyPackagePreReleaseInfos>-$(MyPreReleaseVersion).$(JourDuMoment)-$(HeureMinutesDuMoment)$(SecondesDuMoment)</MyPackagePreReleaseInfos>--><!-- Trop récurrent : surexcite Visual Studio -->
+    <MyPackagePreReleaseInfos>-$(MyPreReleaseVersion).$(JourDuMoment)-$(HeureMinutesDuMoment)</MyPackagePreReleaseInfos>
+		<MyPackageOutputDrive>D:</MyPackageOutputDrive>
+    <MyDependenciesVersionWildcard>*-*</MyDependenciesVersionWildcard>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<MyPackagePreReleaseInfos></MyPackagePreReleaseInfos>
+		<MyPackageOutputDrive>P:</MyPackageOutputDrive>
+    <MyDependenciesVersionWildcard>*</MyDependenciesVersionWildcard><!-- Une version quelconque de PROD ne doit jamais dépendre d'une version de dév.(*-*) -->
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!--<PackageOutputPath>T:</PackageOutputPath>-->
+		<PackageOutputPath>$(MyPackageOutputDrive)\__LIBS\____Packages\Transverse\_C#</PackageOutputPath>
+	</PropertyGroup>
+</Project>

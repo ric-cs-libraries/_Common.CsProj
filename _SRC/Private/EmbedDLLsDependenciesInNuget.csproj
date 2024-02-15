@@ -1,0 +1,16 @@
+<Project>
+  <!-- Mais ATTENTION : le 1er niveau de DLLs en dépendances, devra avoir un attribut PrivateAssets="all" (dans la balise ProjectReference)
+       pour que tout projet qui utilisera le Nuget, puisse récupérer toute la chaîne de dépendances(DLLs(ProjectReference)) de ces DLLs
+  -->
+	<PropertyGroup>
+		<!-- Partie 1/2 : pour permettre à mon NuGet d'embarquer ses dépendances (.dlls (ProjectReference)) AINSI QUE celles de ses dépendances -->
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<!-- Partie 2/2 (suite) : tjs pour permettre à mon NuGet d'embarquer ses dépendances (.dlls (ProjectReference)) AINSI QUE celles de ses dépendances -->
+	<Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+		</ItemGroup>
+	</Target>
+</Project>
