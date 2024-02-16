@@ -29,6 +29,6 @@
 
 	<PropertyGroup>
 		<!--<PackageOutputPath>T:</PackageOutputPath>-->
-		<PackageOutputPath>$(MyPackageOutputDrive)\__LIBS\____Packages\Transverse\_C#</PackageOutputPath>
+		<PackageOutputPath>$(MyPackageOutputDrive)\__LIBS\____Packages\$(MyBoundedContextFolderNamePrefix)\_C#</PackageOutputPath>
 	</PropertyGroup>
 </Project>
