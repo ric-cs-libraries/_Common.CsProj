@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <ExactVersion>1</ExactVersion><!-- Pratique à mettre à 1 en cas de coupure Internet, pour éviter qu'il essaye et s'acharne en vain, à chercher sur nuget.org des versions plus récentes -->
+    <ExactVersion>0</ExactVersion><!-- Pratique à mettre à 1 en cas de coupure Internet, pour éviter qu'il essaye et s'acharne en vain, à chercher sur nuget.org des versions plus récentes -->
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(ExactVersion)' == '0' ">
