@@ -1,0 +1,28 @@
+<Project>
+  <PropertyGroup>
+    <ExactVersion>1</ExactVersion><!-- Pratique à mettre à 1 en cas de coupure Internet, pour éviter qu'il essaye et s'acharne en vain, à chercher sur nuget.org des versions plus récentes -->
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(ExactVersion)' == '0' ">
+    <MicrosoftNETTestSdkVersion>17.*</MicrosoftNETTestSdkVersion>
+    <xUnitVersion>2.*</xUnitVersion>
+    <xUnitRunnerVersion>2.*</xUnitRunnerVersion>
+    <MoqVersion>4.*</MoqVersion>
+
+    <MSTestTestFrameworkVersion>3.*</MSTestTestFrameworkVersion>
+    <MSTestTestAdapterVersion>3.*</MSTestTestAdapterVersion>
+    <FluentAssertionsVersion>6.*</FluentAssertionsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(ExactVersion)' == '1' ">
+    <MicrosoftNETTestSdkVersion>17.9.0</MicrosoftNETTestSdkVersion>
+    <xUnitVersion>2.7.0</xUnitVersion>
+    <xUnitRunnerVersion>2.5.7</xUnitRunnerVersion>
+    <MoqVersion>4.20.70</MoqVersion>
+
+    <MSTestTestFrameworkVersion>3.2.2</MSTestTestFrameworkVersion>
+    <MSTestTestAdapterVersion>3.2.2</MSTestTestAdapterVersion>
+    <FluentAssertionsVersion>6.12.0</FluentAssertionsVersion>  
+  </PropertyGroup>
+
+</Project>
