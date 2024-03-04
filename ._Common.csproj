@@ -3,8 +3,17 @@
   <PropertyGroup>
 
     <ImplicitUsings>enable</ImplicitUsings>
+
     <Nullable>enable</Nullable>
+
+    <!-- Ainsi, TOUS LES PROJETS (important le présent csproj), 
+           dans lesquels, un de leur bout de code tentera de mettre à null, 
+           une variable(interne ou d'un autre projet) de type Référence non explicitement déclarée comme nullable (pas de '?'),
+         ne passeront plus à la compil., c-à-d qu'au lieu d'avoir un Warning du genre (CS8604 ou CS8625, etc..),
+         on aura en lieu et place : une erreur de compil. .
+    -->
+    <WarningsAsErrors>nullable</WarningsAsErrors>
 
   </PropertyGroup>    
 
-</Project>  
+</Project>
