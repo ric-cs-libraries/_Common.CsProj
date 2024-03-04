@@ -7,10 +7,13 @@
     <Nullable>enable</Nullable>
 
     <!-- Ainsi, TOUS LES PROJETS (important le présent csproj), 
-           dans lesquels, un de leur bout de code tentera de mettre à null, 
+           dans lesquels, un de leur bout de code tentera d'affecter à null, 
            une variable(interne ou d'un autre projet) de type Référence non explicitement déclarée comme nullable (pas de '?'),
          ne passeront plus à la compil., c-à-d qu'au lieu d'avoir un Warning du genre (CS8604 ou CS8625, etc..),
          on aura en lieu et place : une erreur de compil. .
+         EXCEPTION à cela : si le développeur prend ses responsabilités en affirmant au compilo., que la valeur à affecter
+                            n'est pas null(via l'usage de '!' :  maValeurAAffecter!), et ceci même si cela peut s'avérer faux,
+                            alors la compil. cette fois passera quand même! :/, mais bon là..., on cherche aussi les ennuis...
     -->
     <WarningsAsErrors>nullable</WarningsAsErrors>
 
