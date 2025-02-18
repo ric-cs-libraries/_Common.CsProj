@@ -3,6 +3,14 @@
   <Import Project="../._Common.csproj"/>
   <Import Project=".TestFwksVersions.csproj"/>
 
+  <PropertyGroup>
+      <!-- 
+        1718 : "Comparison made to same variable" (a == a).
+      -->
+    <NoWarn>1718</NoWarn>
+    
+  </PropertyGroup>
+
 	<ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" /><!-- Indispensable pour TOUS, sinon Tests non exécutés -->
     
