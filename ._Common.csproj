@@ -17,6 +17,11 @@
     -->
     <WarningsAsErrors>nullable</WarningsAsErrors>
 
+    <!-- 
+      1718 : "Comparison made to same variable" (a == a).
+    -->
+    <NoWarn>1718</NoWarn>
+
   </PropertyGroup>    
 
 </Project>
