@@ -4,25 +4,25 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(ExactVersion)' == '0' ">
-    <MicrosoftNETTestSdkVersion>17.*</MicrosoftNETTestSdkVersion>
-    <xUnitVersion>2.*</xUnitVersion>
-    <xUnitRunnerVersion>2.*</xUnitRunnerVersion>
+    <MicrosoftNETTestSdkVersion>18.*</MicrosoftNETTestSdkVersion>
+    <xUnitVersion>3.*</xUnitVersion>
+    <xUnitRunnerVersion>3.*</xUnitRunnerVersion>
     <MoqVersion>4.*</MoqVersion>
 
-    <MSTestTestFrameworkVersion>3.*</MSTestTestFrameworkVersion>
-    <MSTestTestAdapterVersion>3.*</MSTestTestAdapterVersion>
-    <FluentAssertionsVersion>6.*</FluentAssertionsVersion>
+    <MSTestTestFrameworkVersion>4.*</MSTestTestFrameworkVersion>
+    <MSTestTestAdapterVersion>4.*</MSTestTestAdapterVersion>
+    <FluentAssertionsVersion>8.*</FluentAssertionsVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(ExactVersion)' == '1' ">
-    <MicrosoftNETTestSdkVersion>17.9.0</MicrosoftNETTestSdkVersion>
-    <xUnitVersion>2.7.0</xUnitVersion>
-    <xUnitRunnerVersion>2.5.7</xUnitRunnerVersion>
-    <MoqVersion>4.20.70</MoqVersion>
+    <MicrosoftNETTestSdkVersion>18.0.1</MicrosoftNETTestSdkVersion>
+    <xUnitVersion>3.2.2</xUnitVersion>
+    <xUnitRunnerVersion>3.1.5</xUnitRunnerVersion>
+    <MoqVersion>4.20.72</MoqVersion>
 
-    <MSTestTestFrameworkVersion>3.2.2</MSTestTestFrameworkVersion>
-    <MSTestTestAdapterVersion>3.2.2</MSTestTestAdapterVersion>
-    <FluentAssertionsVersion>6.12.0</FluentAssertionsVersion>  
+    <MSTestTestFrameworkVersion>4.0.2</MSTestTestFrameworkVersion>
+    <MSTestTestAdapterVersion>4.0.2</MSTestTestAdapterVersion>
+    <FluentAssertionsVersion>8.9.0</FluentAssertionsVersion>  
   </PropertyGroup>
 
 </Project>

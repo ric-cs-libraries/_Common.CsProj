@@ -15,7 +15,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" /><!-- Indispensable pour TOUS, sinon Tests non exécutés -->
     
     <!-- POUR xUnit-->
-    <PackageReference Include="xunit" Version="$(xUnitVersion)" />
+    <PackageReference Include="xunit.v3" Version="$(xUnitVersion)" />
     <PackageReference Include="xunit.runner.visualstudio" Version="$(xUnitRunnerVersion)"/>   <!-- Indispensable sinon Tests non exécutés (ignorés) -->
 
     <!-- POUR FluentAssertions -->
