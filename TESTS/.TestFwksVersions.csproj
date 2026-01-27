@@ -5,8 +5,12 @@
 
   <PropertyGroup Condition=" '$(ExactVersion)' == '0' ">
     <MicrosoftNETTestSdkVersion>18.*</MicrosoftNETTestSdkVersion>
-    <xUnitVersion>3.*</xUnitVersion>
-    <xUnitRunnerVersion>3.*</xUnitRunnerVersion>
+    
+    <!-- <xUnitVersion>3.*</xUnitVersion> --> <!-- Last xunit, but : NCrunch is not yet compatible with it -->
+    <!--<xUnitRunnerVersion>3.*</xUnitRunnerVersion>--> <!-- Last xunit, but : NCrunch is not yet compatible with it -->
+    <xUnitVersion>2.*</xUnitVersion> <!-- Waiting that NCrunch gets compatible with xunit.v3 -->
+    <xUnitRunnerVersion>2.*</xUnitRunnerVersion> <!-- Waiting that NCrunch gets compatible with xunit.v3 -->
+    
     <MoqVersion>4.*</MoqVersion>
 
     <MSTestTestFrameworkVersion>4.*</MSTestTestFrameworkVersion>
@@ -16,8 +20,12 @@
 
   <PropertyGroup Condition=" '$(ExactVersion)' == '1' ">
     <MicrosoftNETTestSdkVersion>18.0.1</MicrosoftNETTestSdkVersion>
-    <xUnitVersion>3.2.2</xUnitVersion>
-    <xUnitRunnerVersion>3.1.5</xUnitRunnerVersion>
+    
+    <!-- <xUnitVersion>3.2.2</xUnitVersion> --> <!-- Last xunit, but : NCrunch is not yet compatible with it -->
+    <!-- <xUnitRunnerVersion>3.1.5</xUnitRunnerVersion> --> <!-- Last xunit, but : NCrunch is not yet compatible with it -->
+    <xUnitVersion>2.9.3</xUnitVersion>  <!-- Waiting that NCrunch gets compatible with xunit.v3 -->
+    <xUnitRunnerVersion>2.8.2</xUnitRunnerVersion>  <!-- Waiting that NCrunch gets compatible with xunit.v3 -->   
+
     <MoqVersion>4.20.72</MoqVersion>
 
     <MSTestTestFrameworkVersion>4.0.2</MSTestTestFrameworkVersion>

@@ -15,7 +15,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" /><!-- Indispensable pour TOUS, sinon Tests non exécutés -->
     
     <!-- POUR xUnit-->
-    <PackageReference Include="xunit.v3" Version="$(xUnitVersion)" />
+    <!-- <PackageReference Include="xunit.v3" Version="$(xUnitVersion)" /> --> <!-- Last xunit, but : NCrunch is not yet compatible with it -->
+    <PackageReference Include="xunit" Version="$(xUnitVersion)" /> <!-- Waiting that NCrunch gets compatible with xunit.v3 -->
     <PackageReference Include="xunit.runner.visualstudio" Version="$(xUnitRunnerVersion)"/>   <!-- Indispensable sinon Tests non exécutés (ignorés) -->
 
     <!-- POUR FluentAssertions -->
