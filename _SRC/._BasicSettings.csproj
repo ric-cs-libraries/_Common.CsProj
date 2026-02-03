@@ -6,6 +6,8 @@
 
 		<GenerateDocumentationFile>true</GenerateDocumentationFile><!-- L'intellisense tiendra alors compte des méthodes que j'ai documentées (et aussi, à ce titre, le nuget embarquera un .xml documentation, de même nom que la .dll) -->
 		<NoWarn>1591</NoWarn><!-- Pas de CS1591 : pas de warning sur les bouts de code public non commentés -->    
+
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow><!-- Pour remonter les OverflowException qui seraient passées sous silence sinon -->
     
     <MyLocalPrivateSubPath>Private</MyLocalPrivateSubPath>
   </PropertyGroup>
