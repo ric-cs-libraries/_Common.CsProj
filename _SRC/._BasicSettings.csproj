@@ -4,8 +4,6 @@
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
-		<PlatformTarget>x64</PlatformTarget>
-
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<AnalysisLevel>latest</AnalysisLevel><!-- Pour que la compil. débusque plus de warning et error potentiels -->    
